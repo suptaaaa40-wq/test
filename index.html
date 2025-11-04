@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Untuk Tuan Putri 💖</title>
+
+<!-- Tambahkan font dari Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -13,47 +17,46 @@
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Poppins', sans-serif;
     transition: background 1s ease;
     overflow: hidden;
   }
 
   .container {
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     max-width: 90%;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.75);
     border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     animation: fadeIn 1s ease;
-    position: relative;
   }
 
   #gifCharacter {
     display: block;
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 15px auto;
     animation: float 3s ease-in-out infinite, pop 1s ease;
-    position: relative;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #ff69b4;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     animation: float 3s ease-in-out infinite;
   }
 
   p {
-    font-size: 1.2em;
-    color: #555;
+    font-size: 1.1em;
+    color: #444;
     margin-bottom: 15px;
+    line-height: 1.5;
   }
 
   button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 1em;
     background: #ff80ab;
     color: white;
@@ -65,7 +68,7 @@
 
   button:hover {
     background: #ff4da6;
-    transform: scale(1.1);
+    transform: scale(1.08);
   }
 
   button:disabled {
@@ -99,21 +102,19 @@
   </div>
 
 <script>
-
 const pages = [
   {title: "Hai, Tuan Putriku 💖", text: "Ini ku buat udah membuang semua malu ku jadi jangan muntah yhhh🍓", gif: "6.gif"},
-  {title: "Tauu gaaak?? ☀️", text: "sejujurly jujurly banget. ku seneng njir bsa ma kmu :v💕", gif: "1.gif"},
-  {title: " jadiii🌸", text: "moga antum tidak cepet cepet bosen sama ane 💌", gif: "2.gif"},
-  {title: "dan juga 💫", text: "kita memang baru sebentar tapi kalo di tinggal ku gemetar kids 💖", gif: "7.jpeg"},
-  {title: "Terima kasih 💐", text: "udah hadir dan mau hibur aku walau ga bsa nyanyi 🎶", gif: "4.jpeg"},
-  {title: "NIH BUNGA ONLEN 💞", text: "ku g bisa buat kata kata bagus tpi yaudah lah love you  🌙", gif: "3.gif"}
+  {title: "Tauu gaaak?? ☀️", text: "Sejujurly jujurly banget... aku seneng banget bisa sama kamu 💕", gif: "1.gif"},
+  {title: "Jadiii🌸", text: "Moga kamu nggak cepet bosen sama aku ya 💌", gif: "2.gif"},
+  {title: "Dan juga 💫", text: "Kita baru sebentar sih, tapi kalo ditinggal aku gemetar 😳💖", gif: "7.jpeg"},
+  {title: "Terima kasih 💐", text: "Udah hadir dan mau hibur aku walau ga bisa nyanyi 🎶", gif: "4.jpeg"},
+  {title: "NIH BUNGA ONLEN 💞", text: "Aku gak jago bikin kata-kata indah, tapi yaudah... Love you 🌙", gif: "3.gif"}
 ];
 
-
 let current = -1;
+
 function nextPage() {
   current++;
-
   const titleEl = document.getElementById("title");
   const textEl = document.getElementById("text");
   const gifEl = document.getElementById("gifCharacter");
@@ -127,14 +128,12 @@ function nextPage() {
 
     document.body.style.background = `linear-gradient(135deg, hsl(${Math.random()*360}, 100%, 90%), hsl(${Math.random()*360}, 100%, 95%))`;
 
-    
     if (current === pages.length - 1) {
       nextBtn.textContent = "💖 Selesai 💖";
       nextBtn.disabled = true;
     }
   }
 }
-
 
 window.onload = () => {
   nextPage();
